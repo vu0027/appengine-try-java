@@ -31,6 +31,6 @@ public class DemoServlet extends HttpServlet {
     resp.setContentType("text/plain");
     resp.getWriter().println("{ \"name\": \"World\" }");
 
-    response.getWriter().write("ABC"); 
+    resp.getWriter().write("ABC"); 
   }
 }
