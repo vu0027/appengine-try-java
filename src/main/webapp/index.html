@@ -9,8 +9,8 @@
 
     <script>
 $(document).ready(function() {
-  $.getJSON('/demo', function() {
-    $('#result').html("Hello Hi");
+  $.getJSON('/demo', function(data) {
+    $('#result').html("Hello, " + data.name);
   });
 });
     </script>
