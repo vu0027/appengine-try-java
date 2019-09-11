@@ -14,24 +14,31 @@
  * limitations under the License.
  */
 
-package myapp;
-
-import java.io.IOException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.Random; 
-import java.util.*;
-
-
 public class DemoServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws IOException {
     resp.setContentType("text/plain");
-    resp.getWriter().println("{ \"name\": \"World\" }");
+    resp.getWriter().println("{ \"name\": \""+listNumber()+"\" }");
 
 
     //out.print("ABC");
   }
+    public int listNumber() {
+        int output =0;
+        Random rand = new Random();
+        List<Integer> list = new ArrayList<Integer>();
+
+        // Generate random integers in range 0 to 999
+        int rand_int1 = 0;
+        for(int i = 0; i < 1000; i++) {
+            // Print random integers
+            rand_int1 = rand.nextInt(1000000000);
+            //list.add(rand_int1);
+            output = rand_int1;
+            System.out.println(rand_int1);
+        }
+
+        return output;
+    }
 }
