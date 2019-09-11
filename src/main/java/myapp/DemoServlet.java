@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 import java.io.IOException;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -47,7 +46,6 @@ public class DemoServlet extends HttpServlet {
             rand_int1 = rand.nextInt(1000000000);
             //list.add(rand_int1);
             output = rand_int1;
-            System.out.println(rand_int1);
         }
 
         return output;
